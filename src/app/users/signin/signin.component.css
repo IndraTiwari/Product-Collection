@@ -1,0 +1,52 @@
+.formdata {
+    height: 22rem;
+    width: 30rem;
+    padding: 20px 30px 20px 20px;
+    top: 15rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .usertext {
+    padding-right: 20rem;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  
+  .userdata {
+    width: 27rem;
+    /* border-radius: 0.5rem; */
+    height: 2rem;
+  }
+  p {
+    color: red;
+  }
+  
+  .submit-btn {
+    width: 27rem;
+    border-radius: 0.5rem;
+    border: none;
+    height: 2rem;
+    background-color: #347ac0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .div-content {
+    margin-top: 25px;
+  }
+  .input-error {
+    border-color: red;
+  }
+  
+  .newUser {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .newUser .createUser {
+    font-weight: 500;
+    color: #347ac0;
+  }
+  

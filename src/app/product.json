@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "productName": "Yamaha FZ",
+      "category": "Bikes",
+      "availableUnits": "300",
+      "unitPrice": "1750",
+      "location": "Mumbai",
+      "date": "2022-02-17T18:30:00.000Z",
+      "description": "New bike with all the advancefeatures",
+      "id": 6
+    },
+    {
+      "productName": "BMW",
+      "category": "Cars",
+      "availableUnits": "520",
+      "unitPrice": "200",
+      "location": "New Delhi",
+      "date": "2022-02-16T18:30:00.000Z",
+      "description": "Comes up with all new features andcomfort",
+      "id": 7
+    },
+    {
+      "productName": "Samsung Galaxy",
+      "category": "Mobile",
+      "availableUnits": "150",
+      "unitPrice": "1000",
+      "location": "Indore",
+      "date": "2019-11-29T18:30:00.000Z",
+      "description": "New galaxy series by Samsung",
+      "id": 8
+    },
+    {
+      "productName": "Titan ",
+      "category": "Watches",
+      "availableUnits": "280",
+      "unitPrice": "1080",
+      "location": "Delhi",
+      "date": "2019-11-26T18:30:00.000Z",
+      "description": "New titan collection in different features",
+      "id": 9
+    },
+    {
+      "productName": "Sonata",
+      "category": "Watches",
+      "availableUnits": "450",
+      "unitPrice": "1500",
+      "location": "Bangalore",
+      "date": "2019-11-24T18:30:00.000Z",
+      "description": "Brand new sonata collection",
+      "id": 10
+    },
+    {
+      "productName": "Bajaj Pulsar",
+      "category": "Bikes",
+      "availableUnits": "200",
+      "unitPrice": "3500",
+      "location": "Mumbai",
+      "date": "2019-11-24T18:30:00.000Z",
+      "description": "Presenting latest edition on pulsar series",
+      "id": 11
+    },
+    {
+      "productName": "Audi",
+      "category": "Cars",
+      "availableUnits": "180",
+      "unitPrice": "3200",
+      "location": "Bangalore",
+      "date": "2019-11-23T18:30:00.000Z",
+      "description": "Information not provided by company",
+      "id": 12
+    },
+    {
+      "productName": "Dell Latitude540",
+      "category": "Laptop",
+      "availableUnits": "260",
+      "unitPrice": "1040",
+      "location": "Delhi",
+      "date": "2019-11-27T18:30:00.000Z",
+      "description": "Information not provided by company",
+      "id": 13
+    },
+    {
+      "productName": "Dell Latitude5490",
+      "category": "Laptop",
+      "availableUnits": "220",
+      "unitPrice": "2300",
+      "location": "Mumbai",
+      "date": "2019-12-16T18:30:00.000Z",
+      "description": "Information not provided by company",
+      "id": 14
+    }
+  ]
+}

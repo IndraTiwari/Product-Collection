@@ -37,7 +37,7 @@ export class SigninComponent implements OnInit {
     if(this.signInForm.valid){
       this.router.navigate(['/products']);
       localStorage.setItem('username',this.signInForm.value.userName);
-      // this.productService.editUser(localStorage.getItem('username'));
+      this.productService.editUser(localStorage.getItem('username'));
     }
     }
   

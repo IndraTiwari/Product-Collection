@@ -1,1 +1,7 @@
-<p>qr-data works!</p>
+<div>
+    <h3>scan to see {{ data.productName }} {{ data.category }} detail</h3>
+    <div>
+      <qr-code [value]="showData" size="350"></qr-code>
+    </div>
+  </div>
+  

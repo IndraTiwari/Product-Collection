@@ -4,13 +4,13 @@ import { ErrorComponent } from './error/error.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProfileComponent } from './users/profile/profile.component';
 import { SigninComponent } from './users/signin/signin.component';
-
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path: 'signin', component: SigninComponent},
-  {path: 'products', component: ProductListComponent},
+  {path: 'products', component: ProductListComponent, canActivate:[AuthGuard]},
   {path: 'error', component: ErrorComponent},
-  {path: 'profile', component: ProfileComponent},
+  {path: 'profile', component: ProfileComponent, canActivate:[AuthGuard]},
   {path: '', redirectTo:'/signin', pathMatch:'full'},
   {path: '**', component: ErrorComponent}
 ];

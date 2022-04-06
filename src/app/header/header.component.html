@@ -1,1 +1,24 @@
-<p>header works!</p>
+<div class="container header-item">
+    <div class="row">
+      <div class="col product-head">
+        <span>logo</span>
+        <span>product title</span>
+      </div>
+  
+      <div class="col user-detail" *ngIf="router.url !== '/signin'">
+        <div class="icon-position">
+          <span>{{ user }}</span>
+          <span mat-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+            <mat-menu #menu="matMenu">
+              <a mat-menu-item (click)="userProfile()">Profile</a>
+              <a mat-menu-item>Settings</a>
+              <a mat-menu-item (click)="onLogout()">Logout</a>
+            </mat-menu>
+          </span>
+        </div>
+        <!-- profile, setting  and logout option -->
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,31 @@
+mat-form-field {
+    width: 100%;
+  }
+  input[type='file'] {
+    color: transparent;
+  }
+  
+  .divide {
+    border-left: thick solid #347ac0;
+  }
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .divPosition {
+    text-align: center;
+  }
+  .imgPosition {
+    font-weight: 500;
+    color: #347ac0;
+    cursor: pointer;
+  }
+  .removeImage {
+    color: red;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

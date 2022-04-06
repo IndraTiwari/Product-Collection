@@ -1,1 +1,59 @@
-<p>profile works!</p>
+<mat-card style="margin-top: 10rem;">
+    <mat-card-title class="imgPosition">User's Detail</mat-card-title>
+    <form [formGroup]="profileForm">
+      <mat-card-content>
+        <div class="container">
+          <div class="row">
+            <div class="col-5 divPosition">
+              <div *ngIf="fileValid">
+                <img
+                  [src]="images ? images : '../../assets/images/user-image.png'"
+                />
+              </div>
+              <div *ngIf="!fileValid">
+                <img src="../../assets/images/user-image.png" />
+              </div>
+              <div>
+                <input
+                  style="visibility: hidden;"
+                  id="profile-pic"
+                  type="file"
+                  (change)="onFileSelect($event)"
+                  formControlName="imageProfile"
+                />
+              </div>
+              <p>{{ fileExtensionMessage }}</p>
+              <label class="imgPosition" for="profile-pic">{{ labelText }}</label
+              ><a *ngIf="images != null" class="removeImage" (click)="remove()">
+                Remove photo</a
+              >
+            </div>
+            <div class="col-1 divide">
+              <!-- <mat-divider vertical style="height:220px"></mat-divider> -->
+            </div>
+            <div class="col-6">
+              <mat-form-field>
+                <input matInput placeholder="User Name" />
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Email" />
+              </mat-form-field>
+              <mat-form-field>
+                <input matInput placeholder="Dob" [matDatepicker]="picker" />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+              <mat-form-field>
+                <textarea matInput placeholder="About"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </form>
+  </mat-card>
+  <!-- https://stackblitz.com/edit/angular-twexqf?file=src%2Fcustomer%2Fcustomer.component.html -->
+  

@@ -1,1 +1,158 @@
-<p>product-details works!</p>
+<section>
+    <mat-icon
+      class="cancel"
+      align="right"
+      matTooltip="cancel"
+      (click)="onCancel()"
+      color="warn"
+      >clear</mat-icon
+    >
+  
+    <h3 align="center">Product Detail</h3>
+    <form [formGroup]="productData">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Product Name"
+          formControlName="productName"
+        />
+        <mat-error
+          *ngIf="
+            productData.get('productName').errors?.required &&
+            productData.get('productName').touched
+          "
+        >
+          please enter product name</mat-error
+        >
+        <mat-error *ngIf="productData.get('productName').hasError('pattern')"
+          >Please enter alphanumeric values
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Category"
+          formControlName="category"
+          alphabetsOnly
+        />
+        <!-- <mat-select >
+                  <mat-option *ngFor="let category of categories"  [value]="category.name">
+                    {{category.name}}
+                  </mat-option>
+                </mat-select> -->
+        <mat-error
+          *ngIf="
+            productData.get('category').errors?.required &&
+            productData.get('category').touched
+          "
+        >
+          please enter category</mat-error
+        >
+        <mat-error *ngIf="productData.get('category').hasError('pattern')"
+          >Please enter alphabates only</mat-error
+        >
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Available Units"
+          formControlName="availableUnits"
+          numbersOnly
+        />
+        <mat-error
+          *ngIf="
+            productData.get('availableUnits').errors?.required &&
+            productData.get('availableUnits').touched
+          "
+        >
+          please enter available units</mat-error
+        >
+      </mat-form-field>
+  
+      <div>
+        <app-slider-value></app-slider-value>
+      </div>
+  
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Unit price"
+          formControlName="unitPrice"
+          numbersOnly
+        />
+        <mat-error
+          *ngIf="
+            productData.get('unitPrice').errors?.required &&
+            productData.get('unitPrice').touched
+          "
+        >
+          please enter per unit price</mat-error
+        >
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput placeholder="location" formControlName="location" />
+        <mat-error
+          *ngIf="
+            productData.get('location').errors?.required &&
+            productData.get('location').touched
+          "
+        >
+          please enter location</mat-error
+        >
+        <mat-error *ngIf="productData.get('location').hasError('pattern')"
+          >please enter alphabates only</mat-error
+        >
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Available Date"
+          [matDatepickerFilter]="filterWeekend"
+          [matDatepicker]="picker"
+          [min]="currentDate"
+          formControlName="date"
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+  
+        <mat-error
+          *ngIf="
+            productData.get('date').errors?.required &&
+            productData.get('date').touched
+          "
+        >
+          please enter date</mat-error
+        >
+      </mat-form-field>
+  
+      <mat-form-field>
+        <input matInput placeholder="Description" formControlName="description" />
+        <mat-error
+          *ngIf="
+            productData.get('description').errors?.required &&
+            productData.get('description').touched
+          "
+        >
+          please enter description</mat-error
+        >
+      </mat-form-field>
+      <section align="center">
+        <button
+          mat-raised-button
+          color="primary"
+          [disabled]="!productData.valid"
+          (click)="!data ? onSubmit() : onEdit()"
+        >
+          {{ !data ? 'Submit' : 'Update' }}
+        </button>
+        <button mat-raised-button color="warn" (click)="onCancel()">
+          Cancel
+        </button>
+      </section>
+    </form>
+  </section>
+  

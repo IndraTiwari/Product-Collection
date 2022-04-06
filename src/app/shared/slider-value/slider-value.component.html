@@ -1,1 +1,16 @@
-<p>slider-value works!</p>
+<div>
+    <div class="custom-slider">
+      <ngx-slider [(value)]="value" [options]="options"></ngx-slider>
+    </div>
+  
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Available in stock"
+        (change)="onChange($event.target.value)"
+        [(ngModel)]="value"
+        numbersOnly
+      />
+    </mat-form-field>
+  </div>
+  

@@ -1,60 +1,25 @@
 <div class="card formdata" [formGroup]="signInForm">
     <div>
       <label class="usertext">Username</label>
-      <input
-        class="userdata"
-        type="text"
-        formControlName="userName"
-        [ngClass]="{
-          'input-error':
-            signInForm.controls['userName'].hasError('required') &&
-            signInForm.controls['userName'].touched
-        }"
-      />
-      <p
-        *ngIf="
-          signInForm.controls['userName'].hasError('required') &&
-          signInForm.controls['userName'].touched
-        "
-      >
-        Please enter username
-      </p>
+      <input class="userdata" type="text" formControlName="userName" [ngClass]="{'input-error': signInForm.controls['userName'].hasError('required') && signInForm.controls['userName'].touched}"/>
+      <p *ngIf="signInForm.controls['userName'].hasError('required') && signInForm.controls['userName'].touched">Please enter username</p>
     </div>
   
     <div class="div-content">
       <label class="usertext">Password</label>
-      <input
-        class="userdata"
-        formControlName="password"
-        [type]="hide ? 'password' : 'text'"
-        [ngClass]="{
-          'input-error':
-            signInForm.controls['password'].hasError('required') &&
-            signInForm.controls['password'].touched
-        }"
-      />
-      <span
-        [ngClass]="hide ? 'visibility_off' : 'visibility'"
-        (click)="showPassword()"
-        >{{ hide ? 'show' : 'hide' }}</span
-      >
+      <input class="userdata" formControlName="password" [type]="hide ? 'password' : 'text'" [ngClass]="{'input-error': signInForm.controls['password'].hasError('required') && signInForm.controls['password'].touched}" />
+      <span [ngClass]="hide ? 'visibility_off' : 'visibility'" (click)="showPassword()" >{{ hide ? 'show' : 'hide' }}</span>
       <!-- <p *ngIf="signInForm.controls['password'].hasError('required') && signInForm.controls['password'].touched">Please enter password</p> -->
-      <p *ngIf="signInForm.controls['password'].hasError('pattern')">
-        please enter correct pattern
-      </p>
+      <p *ngIf="signInForm.controls['password'].hasError('pattern')"> please enter correct pattern </p>
     </div>
   
     <div class="div-content">
-      <button class="submit-btn" type="submit" (click)="onSubmit()">
-        Signin
-      </button>
+      <button class="submit-btn" type="submit" (click)="onSubmit()"> Signin</button>
     </div>
   
     <div>
-      <label class="newUser"
-        >Don't have an account?
-        <span class="createUser">Sign up now.</span></label
-      >
+      <label class="newUser">Don't have an account?
+        <span class="createUser">Sign up now.</span></label>
     </div>
   </div>
   

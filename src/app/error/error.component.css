@@ -1,0 +1,23 @@
+.error-box {
+    height: 10rem;
+    width: 55%;
+    margin-top: 5rem;
+    border: 10px solid #e6e6e6;
+    color: #000;
+    border-radius: 0.5rem;
+    /* box-shadow: black; */
+    box-shadow: 0px 3px 8px #000 !important;
+  }
+  
+  .error-icon {
+    color: red;
+    font-size: 60px;
+    padding-top: 2.5rem;
+    padding-left: 3rem;
+  }
+  .error-text {
+    padding-top: 4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  

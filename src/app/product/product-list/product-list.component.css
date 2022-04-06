@@ -1,0 +1,36 @@
+table {
+    width: 100%;
+  }
+  
+  .add-item {
+    float: right;
+    padding: 1rem 2em;
+  }
+  
+  mat-icon {
+    margin-left: 5px;
+  }
+  
+  /* table header */
+  /* .mat-header-cell {
+    color: rgba(48, 45, 199, 0.54);
+  } */
+  .mat-header-cell {
+    color: #12309c;
+  }
+  
+  .mat-header-cell {
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  
+  .mat-row:hover {
+    background-color: #f5f5f5;
+  }
+  h3 {
+    color: rgba(255, 0, 0, 0.89);
+  }
+  .product-top {
+    margin-top: 3rem;
+  }
+  
